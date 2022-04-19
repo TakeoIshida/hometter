@@ -15,7 +15,7 @@
                     <table class="table table-striped">
                         <thead>
                             <th>ユーザー名</th>
-                            <th>登録した本</th>
+                            <th>ツイート</th>
                         </thead>
                         <tbody>
                         @foreach ($users as $user)
@@ -25,7 +25,8 @@
                                 <td>
                                     <ul>
                                         @foreach ($user->books as $book)
-                                            <li>{{$book->item_name}}</li>
+                                            <li>{{$book->item_text}}<img src="upload/{{$book->item_img}}"width="100"></li>
+                                            <!--<li><img src="upload/{{$book->item_img}}"width="100"></li>-->
                                         @endforeach
                                     </ul>
                                 @endif

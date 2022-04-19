@@ -26,6 +26,7 @@
                         <!-- ツイート-->
                         <td class="table-text">
                             <div>{{ $book->item_text }}</div>
+                            <div><img src="upload/{{$book->item_img}}"width="100"></div>
                         </td>
                         <!-- 本: 削除ボタン -->
                         <td>
@@ -43,6 +44,29 @@
                                 <button type="submit" class="btn btn-primary">更新</button>
                             </a>
                         </td>
+                        
+                        <td>
+                            	@if($book->favoriteBook()->where('user_id',Auth::id())->exists() === false)
+                                	<form action="{{ url('book/'.$book->id.'/like') }}" method="POST">
+                                		{{ csrf_field() }}
+                                		<button type="submit" class="btn btn-outline-warning">
+                                		    Goodjob
+                                		</button>
+                                	</form>
+                            	@endif
+                            	
+                            	@if($book->favoriteBook()->where('user_id',Auth::id())->exists() === true)
+                                	<form action="{{ url('book/'.$book->id.'/unlike') }}" method="POST">
+                                		{{ csrf_field() }}
+                                		<button type="submit" class="btn btn-warning">
+                                		    Goodjob
+                                		</button>
+                                	</form>
+                            	@endif
+                            	 <div class="row justify-content-center">
+                                <p>Goodjob数：{{ $book->favoriteBook()->count() }}</p>
+                                </div>
+                            </td>
                     </tr>
                 @endforeach
             @endif
