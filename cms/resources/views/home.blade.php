@@ -8,13 +8,46 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                    <div class="alert alert-primary">
+        <div>マイページサンプル</div>
+        <div>ログインユーザーの情報のみ表示</div>
+    </div>
+    <table class="table table-striped task-table">
+        <!-- テーブルヘッダ -->
+        <thead>
+            <th>ツイート一覧</th>
+            <th>&nbsp;</th>
+        </thead>
+        <!-- テーブル本体 -->
+        <tbody>
+            @if(isset($books))
+                @foreach ($books as $book)
+                    <tr>
+                        <!-- ツイート-->
+                        <td class="table-text">
+                            <div>{{ $book->item_text }}</div>
+                        </td>
+                        <!-- 本: 削除ボタン -->
+                        <td>
+                            <form action="{{ url('book/'.$book->id) }}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger">
+                                    削除
+                                </button>
+                            </form>
+                        </td>
+                        <!-- 本: 更新ボタン -->
+                        <td>
+                            <a href="{{ url('booksedit/'.$book->id) }}">
+                                <button type="submit" class="btn btn-primary">更新</button>
+                            </a>
+                        </td>
+                    </tr>
+                @endforeach
+            @endif
+        </tbody>
+    </table>
                 </div>
             </div>
         </div>
