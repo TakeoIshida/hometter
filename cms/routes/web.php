@@ -14,10 +14,11 @@ use App\Http\Controllers\BookController;
 |
 */
 // 本のダッシュボード表示
-Route::get('/', [BookController::class, 'index']);
+
 
 Route::group(['middleware' => 'auth'], function () {
-
+    
+    Route::get('/', [BookController::class, 'index']);
     
     // 新「本」を追加
     Route::post('/books', [BookController::class, 'store']);

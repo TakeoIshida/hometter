@@ -128,6 +128,6 @@ class __TwigTemplate_f6d8ef57d884c7ae7395a0ccd28fdfd29b47295fcef4b12e4ef0516e85a
 
     public function getSourceContext()
     {
-        return new Source("", "select_lang.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/select_lang.twig");
+        return new Source("", "select_lang.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/select_lang.twig");
     }
 }

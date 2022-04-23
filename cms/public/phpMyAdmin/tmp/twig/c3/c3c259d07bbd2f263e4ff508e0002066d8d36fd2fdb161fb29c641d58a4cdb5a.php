@@ -61,6 +61,6 @@ class __TwigTemplate_eeb0778858f0f871ca133a9c8cde51b6c9926a1e1f3c7d1b4ae1d1ff64e
 
     public function getSourceContext()
     {
-        return new Source("", "login/footer.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/login/footer.twig");
+        return new Source("", "login/footer.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/login/footer.twig");
     }
 }

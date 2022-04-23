@@ -128,6 +128,6 @@ class __TwigTemplate_4e9debb4401621659f4cebe48ea3731e5d2e861914daaf26da6d38a6836
 
     public function getSourceContext()
     {
-        return new Source("", "scripts.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/scripts.twig");
+        return new Source("", "scripts.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/scripts.twig");
     }
 }

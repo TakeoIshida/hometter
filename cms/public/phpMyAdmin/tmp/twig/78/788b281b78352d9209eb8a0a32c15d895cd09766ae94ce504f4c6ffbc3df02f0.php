@@ -50,6 +50,6 @@ class __TwigTemplate_2188b448940833ceabd98822037dcfe07dd825f40ed05c45411cce6d3f6
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/tabs_bottom.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/config/form_display/tabs_bottom.twig");
+        return new Source("", "config/form_display/tabs_bottom.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/config/form_display/tabs_bottom.twig");
     }
 }

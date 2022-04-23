@@ -542,6 +542,6 @@ function extendingValidatorMessages () {
 
     public function getSourceContext()
     {
-        return new Source("", "javascript/variables.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/javascript/variables.twig");
+        return new Source("", "javascript/variables.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/javascript/variables.twig");
     }
 }

@@ -88,6 +88,6 @@ class __TwigTemplate_2fedb4905731d6f404aaefc5a2065f24f68626e356d45c93c25ce72726e
 
     public function getSourceContext()
     {
-        return new Source("", "console/toolbar.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/console/toolbar.twig");
+        return new Source("", "console/toolbar.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/console/toolbar.twig");
     }
 }

@@ -62,6 +62,6 @@ class __TwigTemplate_ade0460f9d6f96fdeff9ed45bc74430f0b15a119aba14895d8379edc9f2
 
     public function getSourceContext()
     {
-        return new Source("", "message.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/message.twig");
+        return new Source("", "message.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/message.twig");
     }
 }

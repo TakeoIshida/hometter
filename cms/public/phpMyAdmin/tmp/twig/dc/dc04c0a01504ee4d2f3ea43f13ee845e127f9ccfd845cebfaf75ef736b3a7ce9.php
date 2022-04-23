@@ -223,6 +223,6 @@ class __TwigTemplate_80ee476133f91fe71df82a0a47d9b2c3eede9263c7059bfba5f25b7fcd3
 
     public function getSourceContext()
     {
-        return new Source("", "header.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/header.twig");
+        return new Source("", "header.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/header.twig");
     }
 }

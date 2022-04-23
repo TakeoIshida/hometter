@@ -94,6 +94,6 @@ class __TwigTemplate_579145edc194621b69fb2695fb430c9c39ecb4bf76f344b8e0d398fc741
 
     public function getSourceContext()
     {
-        return new Source("", "console/query_action.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/console/query_action.twig");
+        return new Source("", "console/query_action.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/console/query_action.twig");
     }
 }

@@ -105,6 +105,6 @@ class __TwigTemplate_ef3618b7586dfd6464d063e71957de7190f49d77093d66ec818739ee103
 
     public function getSourceContext()
     {
-        return new Source("", "top_menu.twig", "/home/ec2-user/environment/cms/public/phpMyAdmin/templates/top_menu.twig");
+        return new Source("", "top_menu.twig", "/home/ec2-user/environment/hometter/cms/public/phpMyAdmin/templates/top_menu.twig");
     }
 }
