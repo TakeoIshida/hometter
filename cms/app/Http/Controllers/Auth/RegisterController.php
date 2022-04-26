@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -51,6 +53,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -64,10 +67,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        // $avatar=request()->file( 'avatar')->getClientOriginalName();
+        // request()->file( 'avatar')->storeAs('./storage/images/', $avatar);
+        $avatar =request()->file('avatar');//file取得
+	    if(!empty($avatar)){                 //fileが空かチェック
+	        $avatar=request()->file( 'avatar')->getClientOriginalName();//ファイル名を取得
+	        request()->file( 'avatar')->storeAs('./storage/images/', $avatar);//ファイルを異動：パスが"./upload/"の場合もあるcloud9
+	        }else{
+	            $avatar = "";
+	        }
+        
+        $user = User::create([
             'name' => $data['name'],
+            'avatar' => $avatar,
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        return $user;
     }
 }
