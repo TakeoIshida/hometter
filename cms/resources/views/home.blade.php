@@ -15,7 +15,7 @@
     <table class="table table-striped task-table">
         <!-- テーブルヘッダ -->
         <thead>
-            <th>ツイート一覧</th>
+            <th>つぶやき一覧</th>
             <th>&nbsp;</th>
         </thead>
         <!-- テーブル本体 -->

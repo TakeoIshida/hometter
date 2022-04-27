@@ -16,7 +16,7 @@
                 @csrf
                 <!-- ツイート内容 -->
                 <div class="form-group col-md-6 p-2">
-                    <label for="item_text" class="col-sm-3 control-label">ツイート</label>
+                    <label for="item_text" class="col-sm-3 control-label">つぶやき</label>
                     <input type="text" name="item_text" class="form-control" id="item_text" value="{{ old('item_text') }}">
                     <label>画像ファイル:</label>
                     <input type="file" class="form-control" name="item_img">
@@ -40,7 +40,7 @@
                 <div class="form-group p-2">
                     <div class="col-sm-offset-3 col-sm-6">
                         <button type="submit" class="btn btn-primary">
-                            ツイートする
+                            つぶやく
                         </button>
                     </div>
                 </div>
@@ -50,13 +50,13 @@
 	<!-- Book: 既に登録されてるツイートのリスト -->
     @if (count($books) > 0)
         <div class="card-body">
-            <h3>ツイート一覧</h3>
+            <h3>つぶやき一覧</h3>
             <table class="table table-striped task-table">
                 <!-- テーブルヘッダ -->
                 <thead>
-                    <th>ツイート</th>
+                    <th>つぶやき</th>
                     <th>ユーザー名</th>
-                    <th>ツイート日時</th>
+                    <th>つぶやき日時</th>
                     <th>削除</th>
                     <th>更新</th>
                     <th>Goodjob</th>
