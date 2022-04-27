@@ -18,6 +18,8 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::orderBy('created_at', 'asc')->get();
+        $books = Book::latest()->get();
+        
         return view('books', ['books' => $books]);
     }
 

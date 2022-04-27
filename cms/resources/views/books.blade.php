@@ -122,6 +122,7 @@
                             	@endif
                             	 <div class="row justify-content-center">
                                 <p>Goodjob数：{{ $book->favoriteBook()->count() }}</p>
+                                
                                 </div>
                             </td>
                         </tr>
