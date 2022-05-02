@@ -72,7 +72,7 @@ class RegisterController extends Controller
         $avatar =request()->file('avatar');//file取得
 	    if(!empty($avatar)){                 //fileが空かチェック
 	        $avatar=request()->file( 'avatar')->getClientOriginalName();//ファイル名を取得
-	        request()->file( 'avatar')->storeAs('./storage/images/', $avatar);//ファイルを異動：パスが"./upload/"の場合もあるcloud9
+	        request()->file( 'avatar')->storeAs('./upload/', $avatar);//ファイルを異動：パスが"./upload/"の場合もあるcloud9
 	        }else{
 	            $avatar = "";
 	        }
