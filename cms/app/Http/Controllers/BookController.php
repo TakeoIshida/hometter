@@ -18,7 +18,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::orderBy('created_at', 'asc')->get();
-        $books = Book::latest()->get();
+        $books = Book::latest()->paginate(10);
         
         return view('books', ['books' => $books]);
     }
@@ -43,7 +43,7 @@ class BookController extends Controller
     {
 		// バリデーション
 	    $validator = Validator::make($request->all(), [
-	        'item_text'   => 'required | min:3 | max:255',
+	        'item_text'   => 'required | min:1 | max:255',
 	       // 'item_number' => 'required | min:1 | max:3',
 	       // 'item_amount' => 'required | max:6',
 	       // 'published'   => 'required',
